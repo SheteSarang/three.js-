@@ -203,9 +203,9 @@ window.addEventListener('pointerup', onPointerUp);
 // Function to update the position of the sphere to chase the cube
 function chaseTarget() {
     const direction = new THREE.Vector3();
-    direction.subVectors(cube.position, sphere.position).normalize(); // Find direction from sphere to cube
+    direction.subVectors(cube.position, sphere.position).normalize(); //Vector subtraction: Find direction from sphere to cube
     const speed = 0.5; // Speed of the chasing sphere
-    sphere.position.add(direction.multiplyScalar(speed)); // Move the sphere towards the cube
+    sphere.position.add(direction.multiplyScalar(speed)); //Vector addition: Move the sphere towards the cube
 }
 
 // Animation loop
